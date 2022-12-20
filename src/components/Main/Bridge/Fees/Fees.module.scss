@@ -1,0 +1,25 @@
+.fees {
+    padding: 15px;
+    background-color: #333333;
+    margin-top: 20px;
+    border: 1px solid #2E2F3C;
+    &__item {
+        font-size: 12px;
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        line-height: 15px;
+        margin-bottom: 12px;
+        .item__text {
+            display: flex;
+            align-items: center;
+            .text__body {
+                margin-right: 2px;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

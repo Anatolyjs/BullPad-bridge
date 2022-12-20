@@ -1,0 +1,12 @@
+.bridgeBtn {
+    margin-top: 30px;
+    width: 100%;
+    background-color: #b01030;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    transition: all .2s ease;
+    &:hover {
+        background-color: #b03930;
+    }
+}

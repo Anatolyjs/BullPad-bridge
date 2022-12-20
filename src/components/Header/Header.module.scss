@@ -1,0 +1,148 @@
+.header {
+    padding: 25px 0;
+    font-size: 30px;
+    overflow: hidden;
+    &__burgerBtn {
+        position: absolute;
+        top: 33px;
+        right: 20px;
+        z-index: 8;
+        display: none;
+        .btn__item {
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+    }
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__logo {
+        &_mobile {
+            display: none;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 60px;
+        position: relative;
+    }
+    &__nav {
+        a {
+            display: inline-block;
+            color: #fff;
+            transition: all .2s ease;
+            font-weight: 500;
+            font-size: 15px;
+            margin-right: 40px;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+    }
+    &__connectWallet {
+        color: #fff;
+        background-color: #b01030;
+        font-size: 15px;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        transition: all .2s ease;
+        &:hover {
+            background-color: #b03930;
+        }
+    }
+    @media (max-width: 992px) {
+        &__burgerBtn {
+            display: inline-block;
+        }
+        &__logo_mobile {
+            display: block;
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            margin: 0;
+            z-index: 1;
+        }
+        &__logo {
+            display: none;
+        }
+        &__body {
+            padding-top: 100px;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: rgb(43, 45, 47);
+            height: 100vh;
+            max-width: 350px;
+            width: 100%;
+            z-index: 7;
+            justify-content: start;
+            font-size: 20px;
+            transform: translate(100%);
+            transition: all .3s ease;
+        }
+        &__nav {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+           
+            a {
+                margin: 0 0 20px 0;
+            }
+        }
+        &.active {
+            .header__body {
+                transform: translate(0);
+            }
+            .header__burgerBtn {
+                    transition: all .5s ease;
+                    .btn__item {
+                        &:nth-child(1) {
+                            transition: all .2s linear;
+                            transform-origin: left top;
+                            transform: rotate(45deg)
+                            translateX(-3px);
+                        }
+                        &:nth-child(2) {
+                            opacity: 0;
+                        }
+                        &:nth-child(3) {
+                            transition: all .2s linear;
+                            transform-origin: left bottom;
+                            transform: rotate(-45deg)
+                            translateX(-2px);
+                        }
+                    }
+            }
+        }
+        &__left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+        &__nav {
+            a{
+                font-size: 20px;
+            }
+            margin-bottom: 20px;
+        }
+        &__connectWallet {
+            font-size: 10px;
+        }
+    }
+}
