@@ -13,22 +13,20 @@ const SWAP_CHAINS = 'SWAP_CHAINS',
 const initialState =  {
     tokens: [
         { name: "USDC", logo: USDC , active: true },
-        { name: "Bitcoin", logo: bitcoin , active: false },
-        { name: "Ethereum", logo: ethereum , active: false },
+        { name: "BTC", logo: bitcoin , active: false },
+        { name: "ETH", logo: ethereum , active: false },
         { name: "USDT", logo: USDT , active: false }
     ],
     chainsFrom: [
-        { name: "USDC", logo: USDC, active: false},
         { name: "Bitcoin", logo: bitcoin, active: false },
         { name: "Ethereum", logo: ethereum, active: true },
-        { name: "USDT", logo: USDT, active: false },
+        { name: "Tether", logo: USDT, active: false },
         { name: "Quai", logo: Quai, active: false }
     ],
     chainsTo: [
-        { name: "USDC", logo: USDC, active: false},
         { name: "Bitcoin", logo: bitcoin, active: false },
         { name: "Ethereum", logo: ethereum, active: false },
-        { name: "USDT", logo: USDT, active: false },
+        { name: "Tether", logo: USDT, active: false },
         { name: "Quai", logo: Quai, active: true }
     ],
     isOpenWallets: false
